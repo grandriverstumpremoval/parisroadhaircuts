@@ -4,12 +4,12 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
 	title="Paris Road Haircuts | Haircuts in Paris, Ontario"
-	description="Affordable, welcoming haircuts at Paris Road Haircuts in Paris, Ontario. Non-charitable cuts are $20. Call or message to check availability."
+	description="Book a haircut at Paris Road Haircuts, a home-based salon at 569 Paris Road in Paris, Ontario. Non-charitable cuts are $20. Call (519) 442-5048 to arrange an appointment."
 >
 	<div class="site-shell">
 		<header class="site-header">
 			<a class="brand" href="#home" aria-label="Paris Road Haircuts home">
-				<span class="brand-mark" aria-hidden="true">PR</span>
+				<img class="brand-mark" src="/paris-road-logo.png" alt="" />
 				<span class="brand-name">Paris Road<br />Haircuts</span>
 			</a>
 			<nav class="main-nav" aria-label="Main navigation">
@@ -61,11 +61,11 @@ import Layout from '../layouts/Layout.astro';
 					<div class="hero-image-frame">
 						<img
 							class="hero-image"
-							src="/haircut-hero.jpg"
-							alt="Illustrative photo of a barber giving a client a trim"
+							src="/google-photo-5.webp"
+							alt="A finished layered haircut at Paris Road Haircuts"
 							fetchpriority="high"
-							width="1400"
-							height="933"
+							width="1360"
+							height="1020"
 						/>
 					</div>
 					<div class="price-stamp" aria-label="Non-charitable cuts, 20 dollars">
@@ -120,6 +120,16 @@ import Layout from '../layouts/Layout.astro';
 							<span class="service-price service-price-text">Ask us</span>
 						</div>
 						<p>Read about the salon's hair-donation story, then get in touch about current options.</p>
+						<figure class="donation-photo">
+							<img
+								src="/hair-donation.webp"
+								alt="A client showing her long hair before donating it"
+								loading="lazy"
+								width="765"
+								height="1020"
+							/>
+							<figcaption>A special hair-donation moment</figcaption>
+						</figure>
 						<a
 							href="https://kitchener.ctvnews.ca/the-word-has-been-spreading-paris-hair-salon-offers-free-hair-styling-to-people-donating-hair-for-cancer-patients-1.6489566"
 							target="_blank"
@@ -128,6 +138,34 @@ import Layout from '../layouts/Layout.astro';
 							Read the CTV story <span aria-hidden="true">↗</span>
 						</a>
 					</article>
+				</div>
+			</section>
+
+			<section class="faq section" aria-labelledby="faq-title">
+				<div class="faq-heading">
+					<p class="eyebrow">Good to know</p>
+					<h2 id="faq-title">A few quick answers.</h2>
+				</div>
+				<div class="faq-list">
+					<details>
+						<summary>Do I need an appointment?</summary>
+						<p>
+							Yes. Paris Road Haircuts is by appointment only. Call
+							<a href="tel:+15194425048">(519) 442-5048</a> or message
+							<a href="https://www.instagram.com/parisroadhaircuts/" target="_blank" rel="noreferrer">
+								@parisroadhaircuts
+							</a>
+							to ask about availability.
+						</p>
+					</details>
+					<details>
+						<summary>How much does a haircut cost?</summary>
+						<p>All non-charitable haircuts are $20. Contact the salon with questions about hair donation appointments.</p>
+					</details>
+					<details>
+						<summary>Where is Paris Road Haircuts?</summary>
+						<p>At 569 Paris Road, Paris, Ontario, N3L 3E1. Please arrange an appointment before visiting this home-based salon.</p>
+					</details>
 				</div>
 			</section>
 
@@ -144,38 +182,37 @@ import Layout from '../layouts/Layout.astro';
 				<div class="photo-grid">
 					<figure class="photo photo-large">
 						<img
-							src="/haircut-detail.jpg"
-							alt="Illustrative close-up of a barber carefully trimming a client's hair"
+							src="/google-photo-6.webp"
+							alt="A short finished haircut at Paris Road Haircuts"
 							loading="lazy"
-							width="1340"
-							height="1787"
+							width="1360"
+							height="1020"
 						/>
-						<figcaption>Care in every detail</figcaption>
+						<figcaption>A fresh, finished cut</figcaption>
 					</figure>
 					<figure class="photo photo-small">
 						<img
-							src="/haircut-tools.jpg"
-							alt="Illustrative barber tools arranged on a work surface"
+							src="/google-photo-9.webp"
+							alt="A finished blonde hairstyle at the salon"
 							loading="lazy"
-							width="1400"
-							height="933"
+							width="1360"
+							height="1020"
 						/>
-						<figcaption>The tools of the trade</figcaption>
+						<figcaption>Soft, layered style</figcaption>
 					</figure>
 					<figure class="photo photo-small photo-second">
 						<img
-							src="/haircut-hero.jpg"
-							alt="Illustrative photo of a barber working on a client's hair"
+							src="/google-photo-10.webp"
+							alt="A finished brunette hairstyle at the salon"
 							loading="lazy"
-							width="1400"
-							height="933"
+							width="1360"
+							height="1020"
 						/>
-						<figcaption>A fresh start</figcaption>
+						<figcaption>Another happy finish</figcaption>
 					</figure>
 				</div>
 				<p class="photo-note">
-					Photos are illustrative stock images from
-					<a href="https://unsplash.com/license" target="_blank" rel="noreferrer">Unsplash</a>, not photos of this salon.
+					Photos from Paris Road Haircuts' Google Business Profile and owner-provided images.
 				</p>
 			</section>
 
@@ -194,11 +231,11 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 				<div class="about-image">
 					<img
-						src="/haircut-tools.jpg"
-						alt="Illustrative barber tools ready for a haircut"
+						src="/google-photo-3.webp"
+						alt="Inside the Paris Road Haircuts salon"
 						loading="lazy"
-						width="1400"
-						height="933"
+						width="1360"
+						height="1020"
 					/>
 				</div>
 			</section>
@@ -226,6 +263,14 @@ import Layout from '../layouts/Layout.astro';
 						</div>
 					</div>
 					<div class="visit-links">
+						<img
+							class="visit-sign"
+							src="/salon-sign.webp"
+							alt="Paris Road Haircuts roadside sign with its phone number and by-appointment-only notice"
+							loading="lazy"
+							width="765"
+							height="1020"
+						/>
 						<a href="https://share.google/y4vY8fq8XHUksDzOL" target="_blank" rel="noreferrer">
 							<span class="visit-link-icon" aria-hidden="true">G</span>
 							<span><strong>View on Google</strong><small>Reviews, details and directions</small></span>
@@ -243,7 +288,7 @@ import Layout from '../layouts/Layout.astro';
 
 		<footer class="site-footer">
 			<a class="brand footer-brand" href="#home" aria-label="Paris Road Haircuts home">
-				<span class="brand-mark" aria-hidden="true">PR</span>
+				<img class="brand-mark" src="/paris-road-logo.png" alt="" />
 				<span class="brand-name">Paris Road<br />Haircuts</span>
 			</a>
 			<p>Good cuts. Good neighbours. Paris, Ontario.</p>
@@ -309,16 +354,11 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.brand-mark {
-		display: grid;
-		width: 43px;
-		height: 43px;
-		place-items: center;
-		border-radius: 50%;
-		background: var(--green);
-		color: #fffaf0;
-		font-family: Georgia, 'Times New Roman', serif;
-		font-size: 14px;
-		letter-spacing: -0.07em;
+		width: 48px;
+		height: 48px;
+		border-radius: 4px;
+		background: white;
+		object-fit: contain;
 	}
 
 	.brand-name {
@@ -717,6 +757,31 @@ import Layout from '../layouts/Layout.astro';
 		font-size: 12px;
 	}
 
+	.donation-photo {
+		position: relative;
+		height: 180px;
+		margin: 0 0 16px;
+		overflow: hidden;
+		background: #d9c9b3;
+	}
+
+	.donation-photo img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center 42%;
+	}
+
+	.donation-photo figcaption {
+		position: absolute;
+		right: 9px;
+		bottom: 9px;
+		padding: 6px 9px;
+		background: rgba(247, 245, 239, 0.94);
+		font-family: Georgia, 'Times New Roman', serif;
+		font-size: 11px;
+	}
+
 	.service-card > a {
 		font-size: 11px;
 		font-weight: 700;
@@ -727,6 +792,54 @@ import Layout from '../layouts/Layout.astro';
 		margin-left: 5px;
 		color: var(--orange);
 		font-size: 15px;
+	}
+
+	.faq {
+		display: grid;
+		grid-template-columns: 0.8fr 1.2fr;
+		gap: clamp(36px, 8vw, 110px);
+		padding-top: 20px;
+	}
+
+	.faq-heading .eyebrow {
+		margin-bottom: 12px;
+	}
+
+	.faq-heading h2 {
+		max-width: 370px;
+		font-family: Georgia, 'Times New Roman', serif;
+		font-size: clamp(34px, 4vw, 48px);
+		font-weight: 400;
+		letter-spacing: -0.045em;
+		line-height: 1.08;
+	}
+
+	.faq-list details {
+		padding: 17px 0;
+		border-bottom: 1px solid #e3ded3;
+	}
+
+	.faq-list details:first-child {
+		padding-top: 0;
+	}
+
+	.faq-list summary {
+		cursor: pointer;
+		font-family: Georgia, 'Times New Roman', serif;
+		font-size: 18px;
+	}
+
+	.faq-list details p {
+		margin: 10px 0 0;
+		color: var(--muted);
+		font-size: 12px;
+		line-height: 1.8;
+	}
+
+	.faq-list details p a {
+		color: var(--green);
+		font-weight: 700;
+		text-underline-offset: 3px;
 	}
 
 	.gallery {
@@ -904,6 +1017,16 @@ import Layout from '../layouts/Layout.astro';
 		border-left: 1px solid #d6d0c3;
 	}
 
+	.visit-sign {
+		width: 100%;
+		height: 165px;
+		margin-bottom: 5px;
+		border-radius: 3px;
+		background: #fff;
+		object-fit: cover;
+		object-position: center 44%;
+	}
+
 	.visit-links > a {
 		display: flex;
 		align-items: center;
@@ -938,9 +1061,8 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.footer-brand .brand-mark {
-		width: 36px;
-		height: 36px;
-		font-size: 12px;
+		width: 42px;
+		height: 42px;
 	}
 
 	.footer-brand .brand-name {
@@ -991,9 +1113,9 @@ import Layout from '../layouts/Layout.astro';
 			padding: 14px 20px;
 		}
 
-		.brand-mark {
-			width: 38px;
-			height: 38px;
+		.site-header .brand-mark {
+			width: 42px;
+			height: 42px;
 		}
 
 		.brand-name {
@@ -1072,6 +1194,12 @@ import Layout from '../layouts/Layout.astro';
 		.services {
 			grid-template-columns: 1fr;
 			gap: 34px;
+		}
+
+		.faq {
+			grid-template-columns: 1fr;
+			gap: 25px;
+			padding-top: 0;
 		}
 
 		.section-heading h2,

@@ -1,8 +1,44 @@
 ---
 const {
 	title = 'Paris Road Haircuts | Haircuts in Paris, Ontario',
-	description = 'Affordable, welcoming haircuts at Paris Road Haircuts in Paris, Ontario.',
+	description = 'Book a haircut at Paris Road Haircuts, a home-based salon at 569 Paris Road in Paris, Ontario. Non-charitable cuts are $20. Call (519) 442-5048 to arrange an appointment.',
 } = Astro.props;
+const siteUrl = Astro.site;
+const canonicalUrl = siteUrl ? new URL(Astro.url.pathname, siteUrl) : undefined;
+const socialImage = siteUrl ? new URL('/google-photo-5.webp', siteUrl) : '/google-photo-5.webp';
+const businessSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'HairSalon',
+	name: 'Paris Road Haircuts',
+	description,
+	telephone: '+1-519-442-5048',
+	url: canonicalUrl?.href,
+	image: siteUrl ? new URL('/google-photo-5.webp', siteUrl).href : undefined,
+	logo: siteUrl ? new URL('/paris-road-logo.png', siteUrl).href : undefined,
+	priceRange: '$20 haircuts',
+	address: {
+		'@type': 'PostalAddress',
+		streetAddress: '569 Paris Road',
+		addressLocality: 'Paris',
+		addressRegion: 'Ontario',
+		postalCode: 'N3L 3E1',
+		addressCountry: 'CA',
+	},
+	sameAs: [
+		'https://share.google/y4vY8fq8XHUksDzOL',
+		'https://www.instagram.com/parisroadhaircuts/',
+	],
+	makesOffer: {
+		'@type': 'Offer',
+		name: 'Non-charitable haircut',
+		price: '20',
+		priceCurrency: 'CAD',
+		itemOffered: {
+			'@type': 'Service',
+			name: 'Haircut',
+		},
+	},
+};
 ---
 <!doctype html>
 <html lang="en-CA">
@@ -13,12 +49,24 @@ const {
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow, max-image-preview:large" />
 		<meta name="theme-color" content="#f7f5ef" />
+		{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+		{siteUrl && <link rel="sitemap" href={new URL('/sitemap-index.xml', siteUrl)} />}
 		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_CA" />
+		<meta property="og:site_name" content="Paris Road Haircuts" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content="/haircut-hero.jpg" />
+		<meta property="og:image" content={socialImage} />
+		<meta property="og:image:alt" content="A finished hairstyle at Paris Road Haircuts in Paris, Ontario" />
+		<meta property="og:url" content={canonicalUrl?.href} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={socialImage} />
 		<title>{title}</title>
+		<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
 	</head>
 	<body>
 		<slot />
