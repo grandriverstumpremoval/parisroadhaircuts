@@ -1,0 +1,35 @@
+---
+const {
+	title = 'Paris Road Haircuts | Haircuts in Paris, Ontario',
+	description = 'Affordable, welcoming haircuts at Paris Road Haircuts in Paris, Ontario.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en-CA">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<meta name="theme-color" content="#f7f5ef" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/haircut-hero.jpg" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	:global(html),
+	:global(body) {
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+	}
+</style>
